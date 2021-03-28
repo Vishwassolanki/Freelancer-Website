@@ -1,0 +1,56 @@
+{% extends 'hirer/layout/master.html' %}
+{% load static %}
+{% block main %}
+<style type="text/css">
+    
+    h3{
+        font-family:Courier; 
+    }
+</style>
+
+
+ 
+        
+<div class="modal-dialog"style="float: left; height: 400px; width: 1500px;">
+    <div class="modal-content" style="float: left; height: 400px; width:1500px;">
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                            <h3> First Name :</h3>
+                            <h3> Last Name :</h3>
+                            <h3> Company Name :</h3>
+                            <h3> Contact :</h3>
+                            <h3> Email :</h3>
+                            <h3> Reviews :</h3>
+                            <h3> Toatl Balance :</h3>
+                    </div>
+
+                    <div class="col-lg-4">
+                        {% for x in data %}
+                            <h3> {{x.fname}}</h3>
+                            <h3> {{x.lname}}</h3>
+                            <h3> {{x.company_name}}</h3>
+                            <h3> {{x.contact}}</h3>
+                            <h3> {{x.email}}</h3>
+                            <h3> 200,00$</h3>
+                            <h3> Reviews</h3>
+
+                    </div>      
+                    <div class="col-lg-4">
+                        <div><img src="{{x.pimage}}" width="280" height="280" border="0" class="img-circle"></div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>      
+    </div>
+</div>
+
+
+
+
+
+
+        
+{% endblock %}

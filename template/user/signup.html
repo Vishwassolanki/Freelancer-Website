@@ -1,0 +1,140 @@
+{% load static %}
+
+<html>
+<head>
+	<title></title>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+
+		label{
+			font-family: georgia;
+			
+		}
+
+		form{
+			margin-top: 50px;
+			margin-right: 10px;
+		}
+
+		.modal-content{
+			margin-top: 0;
+			color:#ECF0F1;
+			background-color: black;
+			
+			border-radius: 10px;
+			box-shadow: 12px 12px 7px black;
+			width: 350px;
+		}
+
+		.container{
+			margin-top: 50px;
+			color: white;
+		}	
+
+		.btn{
+			border:none;
+			background-image: linear-gradient(to right, black, grey);
+		}
+		.form-control{
+			width: 400px;	
+		}
+	</style>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-5">
+				<img src="{% static 'admin/images/bgt1.jpeg' %}">
+			</div>	
+			<div class="col-md-7">
+				<div class="container">
+					<center><h3>Signup</h3></center>
+				</div>
+				<div class="modal-dialog">
+					<div class="modal-content"> 
+						<div class="modal-body">
+							<form action="/user1/user_register" method="POST" enctype="multipart/form-data">
+								{% csrf_token %}
+								<div class="form-group">
+									<label><strong>Username:</strong></label>
+									<input type="text" class="form-control" name="username">
+								</div>
+								<div class="form-group">
+									<label><strong>Display Picture:</strong></label>
+									<input type="file" class="form-control" name="image">
+								</div>
+								<div class="form-group">
+									<label><strong>First Name:</strong></label>
+									<input type="text" class="form-control" name="fname">
+								</div>
+								<div class="form-group">
+									<label>Last Name: </label>
+									<input type="text" class="form-control" name="lname">
+								</div>
+								<div class="form-group">
+									<label>Email: </label>
+									<input type="Email" class="form-control" name="email">
+								</div>
+								<div class="form-group">
+									<label>Contact: </label>
+									<input type="number" class="form-control" name="contact">
+								</div>
+								<div class="form-group">
+									<label>Qualification: </label>
+									<input type="text" class="form-control" name="Qualification">
+								</div>
+								<div class="form-group">
+									<label>Technical expertise: </label>
+									<input type="text" class="form-control" name="tech_exp">
+								</div>
+								<div class="form-group">
+									<label>Experience: </label>
+									<input type="text" class="form-control" name="exp">
+								</div>
+								<div class="form-group">
+									<label>Charges per Hour: </label>
+									<input type="number" class="form-control" name="charges">
+								</div>
+								<div class="form-group">
+									<label>Password: </label>
+									<input type="Password" class="form-control" name="password">
+								</div>
+								<div class="form-group">
+									<label>Confirm Password: </label>
+									<input type="Password" class="form-control" name="cpassword">
+								</div>
+								{% if error %}
+								<p>{{error}}</p>
+								{% endif %}
+								<div class="form-group">
+									<center>
+
+										<input type="submit">submit
+
+									</center>
+								</div>
+							</form>
+						</div>			
+					</div>
+				</form>
+			</div>
+				
+		</div>	
+</body>	
+</html>

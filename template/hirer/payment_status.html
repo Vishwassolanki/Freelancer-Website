@@ -1,0 +1,41 @@
+{% extends 'hirer/layout/master.html' %}
+{% load static %}
+{% block main %}
+
+<div class="modal-dialog" style="float: left; height: 400px; width: 1500px;">
+    <div class="modal-content" style="float: left; height: 400px; width: 1500px;">
+        <div class="modal-header" style="background-color: #f0f0f0">
+            <center><h3 class="modal-title" id="myModalLabel">Payment Status</h3></center>
+        </div>
+        <div class="modal-body">
+            <table class="table">
+                <tr>
+                    <th>Project ID</th>
+                    <th>Project Name</th>
+                    <th>Total Cost</th>
+                    <th>Paid Amount</th>
+                    <th>status</th>
+                </tr>
+                <tr>
+                	<td>1</td>
+                	<td>hospital</td>
+                	<td>JS</td>
+                	<td>python</td>
+                	<td><button class="btn btn-info">Pending</button></td>
+                </tr>
+                
+            </table>
+        </div>
+        <div class="card-footer clearfix">
+                <ul class="pagination pagination-md m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+    </div>
+</div>
+
+{% endblock %}

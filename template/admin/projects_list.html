@@ -1,0 +1,53 @@
+{% extends 'admin/layout/master.html' %}
+{% load static %}
+{% block main %}
+
+<div class="modal-dialog" style="float: left; height: 400px; width: 1400px;">
+    <div class="modal-content" style="float: left; height: 400px; width: 1400px;">
+        <div class="modal-header" style="background-color: #f0f0f0">
+            <center><h3 class="modal-title" id="    ">Projects List</h3></center>
+        </div>
+        <div class="modal-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Project Name</th>
+                        <th>Category</th>
+                        <th>Hirer Name</th>
+                        <th>Freelancer Name</th>
+                        <th>Post Date</th>
+                        <th>Budget</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                    	<td></td>
+                    	<td></td>
+                        <td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td></td>
+                    	<td><button class="btn btn-info">Pending</button></td>
+                    </tr>
+                    
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="card-footer clearfix">
+                <ul class="pagination pagination-md m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+    </div>
+</div>
+
+{% endblock %}

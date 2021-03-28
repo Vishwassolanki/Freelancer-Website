@@ -1,0 +1,41 @@
+{% extends 'hirer/layout/master.html' %}
+{% load static %}
+{% block main %}
+<div class="modal-dialog" style="float: left; height: 400px; width: 1500px;">
+    <div class="modal-content" style="float: left; height: 400px; width: 1500px;">
+        <div class="modal-header" style="background-color: #f0f0f0">
+            <center><h3 class="modal-title" id="    ">Freelancer List</h3></center>
+        </div>
+        <div class="modal-body">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Technology</th>
+                    <th>Previous Project review</th>
+                    <th>Joining Date</th>
+                </tr>
+                {% for x in data %}
+                <tr>
+                	<td>{{x.id}}</td>
+                	<td>{{x.fname}} {{x.lname}}</td>
+                	<td>{{x.tech_exp}}</td>
+                	<td>project review</td>
+                	<td>{{x.jdate}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="card-footer clearfix">
+                <ul class="pagination pagination-md m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+    </div>
+</div>
+
+{% endblock %}

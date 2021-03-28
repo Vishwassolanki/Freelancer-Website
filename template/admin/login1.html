@@ -1,0 +1,98 @@
+{% load static %}
+<html>
+<head>
+	<title></title>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+	<style type="text/css">
+		body{
+			background-color: black;
+		}
+
+		label{
+			font-family: georgia;
+			
+		}
+
+		form{
+			margin-top: 50px;
+			margin-right: 10px;
+		}
+
+		.modal-content{
+			margin-top: 0;
+			color:#ECF0F1;
+			background-color: black;
+			
+			border-radius: 10px;
+			box-shadow: 12px 12px 7px black;
+			width: 350px;
+		}
+
+		.container{
+			margin-top: 50px;
+			color: white;
+		}	
+
+		.btn{
+			border:none;
+			background-image: linear-gradient(to right, black, grey);
+		}
+	</style>
+
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-5">
+				<img src="{% static 'admin/images/bgt1.jpeg' %}">
+			</div>	
+			<div class="col-md-7">
+				<div class="container">
+					<center><h3>Login</h3></center>
+				</div>
+				<div class="modal-dialog">
+					<div class="modal-content"> 
+						<div class="modal-body">
+							<form action="admin_login" method="post">{% csrf_token %}
+								<div class="form-group">
+									<label><strong><h5>Email: </h5></strong></label>
+									<input type="text" class="form-control" name="adminname">
+								</div>
+								<div class="form-group">
+									<label><strong><h5>Password: </h5></strong></label>
+									<input type="Password" class="form-control" name="password">
+								</div>
+								<div class="form-group">
+									<a href="signup">
+										New User?? Signup..
+									</a>
+								</div>	
+								<div class="form-group">
+									<center>
+										<a href="home">
+										<button class="btn btn-danger">Submit</button>
+										</a>
+									</center>
+								</div>
+							</form>
+						</div>			
+					</div>
+				</form>
+			</div>
+				
+		</div>	
+</html>

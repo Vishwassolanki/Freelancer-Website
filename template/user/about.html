@@ -1,0 +1,43 @@
+{% extends 'user/layout/master.html' %}
+{% load static %}
+{% block main %}
+ <section class="hero-wrap hero-wrap-2 "  data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+          <div class="col-md-9 ftco-animate pb-5">
+            
+          </div>
+      </div>
+    </section>
+
+{% for x in data %}
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header"> 
+            <div class="col-lg-4">
+                <img src="{{x.pimage}}" width="280" height="280" border="0" class="img-square">
+            </div>
+            <div class="col-lg-8">
+                <h4 class="text-right">{{x.fname}} {{x.lname}}</h4>
+            </div>        
+        </div>
+        <div class="modal-body">    
+            <p class="text-left"><br>
+            {{x.email}}</p>
+            <hr>
+            <p class="text-left"><br>
+            {{x.contact}}</p>
+            <hr>
+            <p class="text-left"><br>
+            {{x.tech_exp}}</p>
+            <hr>
+            <p class="text-left"><br>
+            {{x.exp}}</p>
+            <hr>
+
+        </div>    
+    </div>
+</div>    
+{% endfor %}
+
+{% endblock %}

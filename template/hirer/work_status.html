@@ -1,0 +1,53 @@
+ {% extends 'hirer/layout/master.html' %}
+{% load static %}
+{% block main %}
+
+<div class="modal-dialog" style="float: left; height: 400px; width: 1500px;">
+    <div class="modal-content" style="float: left; height: 400px; width: 1500px;">
+        <div class="modal-header" style="background-color: #f0f0f0">
+            <center><h3 class="modal-title" id="    ">Business in Details</h3></center>
+        </div>
+        <div class="modal-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Project Name</th>
+                        <th>Category</th>
+                        <th>Frontend tech</th>
+                        <th>Backend tech</th>
+                        <th>Duration<small>(in days)</small></th>
+                        <th>Budget</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x in data %}
+                    <tr>
+                    	<td>{{x.id}}</td>
+                    	<td>{{x.project_name}}</td>
+                        <td>{{x.category}}</td>
+                    	<td>{{x.ftech}}</td>
+                    	<td>{{x.btech}}</td>
+                    	<td>{{x.start_time}}</td>
+                    	<td>{{x.budget}}</td>
+                    	<td>{{x.status}}<button class="btn btn-info">Pending</button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                
+            </table>
+        </div>
+        <div class="card-footer clearfix">
+                <ul class="pagination pagination-md m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+    </div>
+</div>
+
+{% endblock %}

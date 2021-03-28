@@ -1,0 +1,60 @@
+{% extends 'hirer/layout/master.html' %}
+{% block main %}
+<div class="modal-dialog" style=" float: left; width: 100px;">
+	<div class="modal-content" style=" float: left; width: 1000px;">
+		<div class="modal-body">
+			<form action="/hirer/post_job" method="post"> {% csrf_token %}
+				<div class="form-group" >
+					<label><strong>Project Name:</strong></label>
+					<input type="text" name="project_name" class="form-control">
+				</div>
+				<div class="form-group" >
+					<label><strong>Project Description:</strong></label>
+					<textarea name="project_description"maxlength="5000" minlength="1" class="form-control"></textarea>
+				</div>
+				<div class="form-group" >
+					<label><strong>Budget</strong></label>
+					<input type="number" name="budget" class="form-control" style="width: 300px;">
+				</div>
+				<div class="form-group" >
+					<label><strong>Category</strong></label>
+					<input type="text" name="category" class="form-control" style="width: 300px;">
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group" >
+								<center><label><strong>Start Time</strong></label></center>
+								<input type="date" name="start_time" class="form-control">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group" >
+								<center><label><strong>End TIme</strong></label></center>
+								<input type="date" name="end_time" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group" >
+								<center></center><label><strong>Frontend Tech</strong></label></center>
+								<input type="text" name="ftech" class="form-control">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group" >
+								<center></center><label><strong>Backend Tech</strong></label></center>
+								<input type="text" name="btech" class="form-control">
+							</div>
+						</div>
+					</div>9
+				</div>
+				<input type="submit" class="btn btn-success form-control"></submit>
+			</form>
+		</div>
+	</div>		
+</div>
+{% endblock %}
